@@ -4,8 +4,6 @@ You Just need to follow all the below stpes to automate your releases with fastl
 
 This component is actually a semi circle slider but it is designed in this way that you can use it as color picker too.
 
-<img src="https://github.com/faizqadri234/react-native-semicircle-slider-color-picker/blob/main/SemiCircleSlider/screenshot/screenshot.png" width="375">
-
 ## 1. Fastlane Installation:
 
 ```tsx
