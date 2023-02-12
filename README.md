@@ -1,7 +1,6 @@
-# fastlane-with-github-actions-implementation
+# Fastlane with Github Actions implementation
 
 You Just need to follow all the below stpes to automate your releases with fastlane and github actions in no time:
-
 
 ## 1. Fastlane Installation:
 
@@ -207,6 +206,51 @@ Now placed <b>`issuer ID`</b> and <b>`key ID`</b> against <b>`APPLE_ISSUER_ID` a
 
 <img src="https://github.com/faizqadri234/fastlane-with-github-actions-implementation/blob/main/Assets/access_token.png" width="375">
 
+## 6. Github Workflow Configuration:
+
+First of all create `.yml` file in your project like <b>`your_project/.github/workflows/your_app_name.yml`</b>. Now copy all the code of `.yml` file provided in this repo to your `.yml` file.
+
+#### <i><b>As we are not going to push our `.env` to git. So, the question arises that how will the github work flow get the environment variables?</b></i>
+
+<i>The answer is, through repository secrets.</i>
+
+### Below are the steps to create repositories secrets:
+
+i. Go to repositories <b>`settings`</b>
+
+<img src="https://github.com/faizqadri234/fastlane-with-github-actions-implementation/blob/main/Assets/repo_settings.png" width="375">
+
+ii. Go to <b>`Actions`</b> under <b>`Secrets and Variables`</b> 
+
+<img src="https://github.com/faizqadri234/fastlane-with-github-actions-implementation/blob/main/Assets/dependabot.png" width="375">
+
+iii. Now create repository secrets
+
+<img src="https://github.com/faizqadri234/fastlane-with-github-actions-implementation/blob/main/Assets/repo_secrets.png" width="375">
+
+## Release Application
+
+### Now you are almost done. You have two ways to release your application to test flight.
+
+### 1. Locally: 
+If you want to release application locally, you can do it by using fastlane command. 
+```tsx
+cd Fastlane
+fastlane distribute
+```
+While executing script, if you get error related to provisioning profile then please select provisioning profile in Xcode.
+
+<img src="https://github.com/faizqadri234/fastlane-with-github-actions-implementation/blob/main/Assets/xcode.png" width="375">
+
+### 2. Through github actions:
+
+If you want to release your application through github actions, first you need to specify branch in `.github/workflows/your_app_name.yml` file on which you want to trigger work flow. And then please comment out `line no 18, 19 and 20` 
+
+```tsx
+# before_all do
+#   Dotenv.overload(".env")
+# end
+```
 
 
 **MIT Licensed**
