@@ -1,8 +1,7 @@
 # fastlane-with-github-actions-implementation
 
-You Just need to follow all the below stpes to automate your releases with fastlane and github actions in no time 
+You Just need to follow all the below stpes to automate your releases with fastlane and github actions in no time:
 
-This component is actually a semi circle slider but it is designed in this way that you can use it as color picker too.
 
 ## 1. Fastlane Installation:
 
