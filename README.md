@@ -228,7 +228,7 @@ iii. Now create repository secrets
 
 <img src="https://github.com/faizqadri234/fastlane-with-github-actions-implementation/blob/main/Assets/repo_secrets.png" width="375">
 
-## Release Application
+## 7. Release Application
 
 ### Now you are almost done. You have two ways to release your application to test flight.
 
@@ -252,5 +252,6 @@ If you want to release your application through github actions, first you need t
 # end
 ```
 
+# Thanks you so much
 
 **MIT Licensed**
